@@ -1,0 +1,24 @@
+body {
+    display: grid;
+    place-items: center;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 17px 85px 150px 80px 70px;
+}
+
+.title {
+    display: block;
+    text-align: center;
+}
+
+.label {
+    background-color: lightblue;
+    text-align: center;
+    line-height: 30px;
+}
+
+.data {
+    font-size: 0.7em;
+}
