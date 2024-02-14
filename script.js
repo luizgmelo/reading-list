@@ -1,4 +1,9 @@
 window.onload = function createBoard() {
+
+    const saveData = (id) => {
+        localStorage.setItem(id, document.getElementById(id).value);
+    }
+
     const container = document.getElementById("container");
     const titles = ["Date", "Title", "Author", "Feedback"];
     const range = (start, end) => {
@@ -34,6 +39,9 @@ window.onload = function createBoard() {
             input.id = title + number;
             input.className = "data";
             input.ariaLabel = title + number;
+            input.onchange = () => {
+                saveData(input.id);
+            }
             container.appendChild(input);
         })
     })
