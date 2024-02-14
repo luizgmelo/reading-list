@@ -1,5 +1,11 @@
 window.onload = function createBoard() {
 
+    const loadData = (id) => {
+        localStorage.getItem(id) ?
+         document.getElementById(id).value = localStorage.getItem(id) :
+         false;
+    }
+
     const saveData = (id) => {
         localStorage.setItem(id, document.getElementById(id).value);
     }
@@ -43,6 +49,7 @@ window.onload = function createBoard() {
                 saveData(input.id);
             }
             container.appendChild(input);
+            loadData(input.id)
         })
     })
 
