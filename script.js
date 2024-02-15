@@ -11,7 +11,7 @@ window.onload = function createBoard() {
     }
 
     const container = document.getElementById("container");
-    const titles = ["Date", "Title", "Author", "Feedback"];
+    const titles = ["Date", "Title", "Author", "Gênero", "Feedback"];
     const range = (start, end) => {
         var ans = [];
         for (let i = start; i <= end; i++) {
